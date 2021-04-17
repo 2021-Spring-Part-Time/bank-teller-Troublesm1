@@ -15,4 +15,12 @@ public class BankAccount {
         this.type = type;
         this.balance = balance;
     }
+
+    public void withdrawal(int amountToWithdrawal) {
+        balance -=amountToWithdrawal;
+    }
+
+    public void deposit(int amountToDeposit) {
+        balance +=amountToDeposit;
+    }
 }

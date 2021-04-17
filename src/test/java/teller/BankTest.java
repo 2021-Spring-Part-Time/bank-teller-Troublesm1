@@ -44,4 +44,14 @@ public class BankTest {
         BankAccount retrievedAccount = underTest.findAccount("1");
         assertEquals(retrievedAccount, null);
     }
+    @Test
+    public void shouldWithdrawalFromAccount(){
+        underTest.add(account1);
+        underTest.withdrawl(account1.getAccountNumber(), 50);
+    }
+    @Test
+    public void shouldDepositToAccount(){
+        underTest.add(account1);
+        underTest.deposit(account1.getAccountNumber(), 50);
+    }
 }

@@ -24,4 +24,14 @@ public class Bank {
     public void close(BankAccount account) {
         accounts.remove(account.getAccountNumber(),account);
     }
+
+    public void withdrawl(String accountNumber, int amountToWithdrawal) {
+        BankAccount withdrawalFromAccount = findAccount(accountNumber);
+        withdrawalFromAccount.withdrawal(amountToWithdrawal);
+    }
+
+    public void deposit(String accountNumber, int amountToDeposit) {
+        BankAccount depositToAccount = findAccount(accountNumber);
+        depositToAccount.deposit(amountToDeposit);
+    }
 }
