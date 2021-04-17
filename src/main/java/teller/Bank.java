@@ -12,7 +12,6 @@ public class Bank {
         accounts.put(accountToAdd.getAccountNumber(), accountToAdd);
 
     }
-
     public BankAccount findAccount(String accountNumber) {
         return accounts.get(accountNumber);
     }
@@ -33,5 +32,11 @@ public class Bank {
     public void deposit(String accountNumber, int amountToDeposit) {
         BankAccount depositToAccount = findAccount(accountNumber);
         depositToAccount.deposit(amountToDeposit);
+    }
+
+    public void showAccounts() {
+        for (BankAccount account: accounts.values()){
+            System.out.println(account.getAccountNumber() + " " + account.getType() + " " + account.getBalance());
+        }
     }
 }

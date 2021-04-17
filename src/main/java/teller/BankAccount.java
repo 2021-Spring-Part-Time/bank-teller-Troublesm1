@@ -11,6 +11,9 @@ public class BankAccount {
     public String getAccountNumber() {
         return accountNumber;
     }
+    public String getType(){
+        return type;
+    }
     public int getBalance() {
         return balance;
     }
@@ -21,7 +24,6 @@ public class BankAccount {
         this.type = type;
         this.balance = balance;
     }
-
 
 
     public void withdrawal(int amountToWithdrawal) {
