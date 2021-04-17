@@ -20,4 +20,8 @@ public class Bank {
     public Collection<BankAccount> getAllAccounts() {
         return accounts.values();
     }
+
+    public void close(BankAccount account) {
+        accounts.remove(account.getAccountNumber(),account);
+    }
 }
