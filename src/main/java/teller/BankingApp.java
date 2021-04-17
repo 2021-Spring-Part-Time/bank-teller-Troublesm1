@@ -27,10 +27,21 @@ public class BankingApp {
         System.out.println("Press 5 to exit");
         userChoice = input.nextLine();
 
-        if(choice.equals("1")) {
-            System.out.println("You want to dposit");
+        if(userChoice.equals("1")) {
+            System.out.println("You want to dopsit");
             System.out.println("Here are your accounts");
             myBank.showAccounts();
-      }
+
+            System.out.println("Select the account by (account number) to make a transaction");
+            String accountNum = input.nextLine();
+            System.out.println("Enter the amount to deposit");
+            int amountToDeposit = input.nextInt();
+            input.nextLine();
+            myBank.deposit(accountNum,amountToDeposit);
+            System.out.println("Your current balance is " + myBank.findAccount(accountNum).getBalance());
+        } while (!userChoice.equals("5"));
+            System.out.println("Thanks for banking with us today");
+          }
     }
 }
+
