@@ -47,11 +47,13 @@ public class BankTest {
     @Test
     public void shouldWithdrawalFromAccount(){
         underTest.add(account1);
-        underTest.withdrawl(account1.getAccountNumber(), 50);
+        underTest.withdrawal(account1.getAccountNumber(), 50);
+        assertEquals(account1.getBalance(), 50);
     }
     @Test
     public void shouldDepositToAccount(){
         underTest.add(account1);
-        underTest.deposit(account1.getAccountNumber(), 50);
+        underTest.deposit(account1.getAccountNumber(), 100);
+        assertEquals(account1.getBalance(),200);
     }
 }

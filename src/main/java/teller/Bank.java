@@ -25,7 +25,7 @@ public class Bank {
         accounts.remove(account.getAccountNumber(),account);
     }
 
-    public void withdrawl(String accountNumber, int amountToWithdrawal) {
+    public void withdrawal(String accountNumber, int amountToWithdrawal) {
         BankAccount withdrawalFromAccount = findAccount(accountNumber);
         withdrawalFromAccount.withdrawal(amountToWithdrawal);
     }
