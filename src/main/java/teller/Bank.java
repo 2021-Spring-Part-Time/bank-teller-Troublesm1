@@ -13,6 +13,6 @@ public class Bank {
     }
 
     public BankAccount findAccount(String accountNumber) {
-        return null;
+        return accounts.get(accountNumber);
     }
 }
