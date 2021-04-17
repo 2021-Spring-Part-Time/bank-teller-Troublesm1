@@ -11,4 +11,8 @@ public class BankAccount {
         this.type = type;
         this.balance = balance;
     }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
 }
