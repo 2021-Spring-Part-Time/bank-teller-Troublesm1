@@ -1,5 +1,6 @@
 package teller;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,5 +15,9 @@ public class Bank {
 
     public BankAccount findAccount(String accountNumber) {
         return accounts.get(accountNumber);
+    }
+
+    public Collection<BankAccount> getAllAccounts() {
+        return accounts.values();
     }
 }

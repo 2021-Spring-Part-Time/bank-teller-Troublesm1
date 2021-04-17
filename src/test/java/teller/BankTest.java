@@ -1,7 +1,8 @@
 package teller;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import java.util.Collection;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankTest {
@@ -22,5 +23,13 @@ public class BankTest {
         underTest.add(account1);
         BankAccount retrievedAccount = underTest.findAccount("1");
         assertEquals(retrievedAccount, account1);
+    }
+
+    @Test
+    public void shouldBeAbleToAddTwoAccount(){
+        underTest.add(account1);
+        underTest.add(account2);
+        Collection<BankAccount> allAccounts = underTest.getAllAccounts();
+        assertEquals(2, allAccounts.size());
     }
 }
